@@ -3,7 +3,7 @@ import React from "react";
 function BStest() {
   return (
     <div className="container text-center">
-      <h1 className="border text-danger">BS5 Test (text in red + border)</h1>
+      <h1 className="border text-danger">BS5 Test <i className="bi bi-apple" /> (red apple show..)</h1>
       <div
         className="alert alert-warning alert-dismissible fade show"
         role="alert"
