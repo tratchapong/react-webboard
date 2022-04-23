@@ -1,4 +1,5 @@
 import React from "react";
+import Post from "./Post";
 // {
 //   "userId": 1,
 //   "id": 1,
@@ -11,27 +12,10 @@ function Posts(props) {
   console.log(data[0])
   return (
     <div className="accordion" id="accordionExample">
-      <div className="accordion-item">
-        <h2 className="accordion-header">
-          <button
-            className="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target={`#db${data[0].id}`}
-          >
-            {data[0].title}
-          </button>
-        </h2>
-        <div
-          id={`db${data[0].id}`}
-          className="accordion-collapse collapse show"
-          data-bs-parent="#accordionExample"
-        >
-          <div className="accordion-body">
-            {data[0].body}
-          </div>
-        </div>
-      </div>
+      { data.map( el => (
+        <Post key={el.id} post={el}/>
+      ))
+      }
     </div>
   );
 }
