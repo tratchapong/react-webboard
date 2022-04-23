@@ -1,10 +1,12 @@
-import BStest from "./BStest";
+import Posts from "./Posts";
+import data from "./data"
 
 
 function App() {
+  
   return (
-    <div className="App">
-    <BStest />      
+    <div className="container mw-800">
+      <Posts data={data}/>
     </div>
   );
 }
