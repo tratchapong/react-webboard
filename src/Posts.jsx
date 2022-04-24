@@ -9,7 +9,6 @@ import Post from "./Post";
 
 function Posts(props) {
   const {data} = props
-  console.log(data[0])
   return (
     <div className="accordion" id="accordionExample">
       { data.map( el => (
