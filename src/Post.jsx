@@ -42,7 +42,7 @@ function Post(props) {
       >
         <div className="accordion-body">
           <div className="container">
-            {post.body}
+            <p> {post.body} </p> 
             <button className='btn btn-outline-success' onClick={hdlClick}>Comment</button>
             {showCM && comments.length > 0 && (
               <Comments comments={comments}/>
